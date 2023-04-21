@@ -7,6 +7,7 @@ require('dotenv').config()
 const app = express();
 const port = 5000;
 
+app.use(cors())
 
 app.get('/', (req, res) => {
 //   res.send('Hello World!');
@@ -17,7 +18,7 @@ app.get('/models', (req, res) => {
     
         const options = {
             method: 'GET',
-            url : 'https://api.up2tom.com/v3/models',
+            url : 'https://api.up2tom.com/v3/models/58d3bcf97c6b1644db73ad12',
             headers: {
                 'Authorization':process.env.UP_2_TOM_API_KEY,
                 'Content-Type':'application/vnd.api+json'
