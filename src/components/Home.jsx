@@ -27,9 +27,12 @@ function Home() {
     
         <ul>
             {drinksItems.map(item => (
-              <li>{item}</li>
+              <p>{item}</p>
             ))}
         </ul>
+        <p className="text-2xl font-bold underline">
+           Hello world!
+        </p>
     </div>
   )
 }
