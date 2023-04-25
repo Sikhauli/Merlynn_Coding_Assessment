@@ -3,6 +3,9 @@ const express = require('express');
 const cors = require('cors')
 const axios = require('axios')
 require('dotenv').config()
+// const connectDB = require('./src/backend/database')
+// const ApiResponse= require('./src/backend/dataSchema')
+
 
 const app = express();
 const port = 5000;
@@ -16,7 +19,6 @@ app.get('/', (req, res) => {
 
 app.get('/models', (req, res) => {
     
-
         const options = {
             method: 'GET',
             url : 'https://api.up2tom.com/v3/models/58d3bcf97c6b1644db73ad12',
@@ -33,7 +35,7 @@ app.get('/models', (req, res) => {
                 console.error(error)
             })
     });
-
+   
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

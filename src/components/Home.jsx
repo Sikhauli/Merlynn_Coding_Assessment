@@ -35,31 +35,35 @@ function DrinkChoiceForm() {
 
       console.log(JSON.stringify(requestData))
       
-      axios.post('https://api.up2tom.com/v3/decision/58d3bcf97c6b1644db73ad12', JSON.stringify(requestData), {
-      // method: 'POST',
+      axios.post('https://api.up2tom.com/v3/decision/58d3bcf97c6b1644db73ad12', JSON.stringify(requestData)
+      , {
       headers: {
         'Authorization': 'TOKEN 9307bfd5fa011428ff198bb37547f979',
         'Content-Type': 'application/vnd.api+json'
       },
-      data: JSON.stringify(Object.fromEntries(formData)),
-    })
-    .then(data => {
+    }).then(data => {
 
+
+     
+
+
+      console.log(data)
      setApiDecison(data.data.data.attributes.decision)
-
     }
      ).catch(error => {
             console.log(error);
           });
-  }
+
+   }
 
     console.log(apiDecision)
 
-  if (!model) return <div>Model Is Empty, Loading The Model...</div>;
+  if (!model) return <div className="bg-center hover:bg-top text-3xl font-bold ">Model Is Empty, Loading The Model...</div>;
 
   return (
+  <div className=" ">  
     <form id='drinkChoiceForm'>
-      <h1>{model.name}</h1>
+      <h1 className="text-3xl font-bold">{model.name}</h1>
       {model.inputs.map(input => (
         <div key={input.name}>
           <label>{input.question}</label>
@@ -76,7 +80,10 @@ function DrinkChoiceForm() {
       ))}
       <button onClick={makeDecision} type="submit">Submit</button>
     </form>
+  </div>  
   );
 }
 
 export default DrinkChoiceForm;
+
+
