@@ -2,7 +2,7 @@
 
 
 # Drink Choice
-> It ask few question then takes you answers and then judge you based on your response  
+> It ask few question then takes your answers and then judge you based on your response  
 
 
 The app would take a decision for you on which drink you can have at that moment,
@@ -35,8 +35,8 @@ can always get a right answer of what to drink to keep themselves on check
 
 ## Development setup
 
-First it is necessary to have node installed then axios is for calling API cors is for allowing call to APi
-dotenv for security express is for a server firebase is for database tailwind is for styling UI and nodemon 
+First it is necessary to have node installed then axios is for calling API, cors is for allowing call to APi,
+dotenv for security express is for a server, firebase is for database, tailwind is for styling UI and nodemon 
 for server restarting
 
 
@@ -62,3 +62,8 @@ Distributed under the Merlynn technologies license. See ``LICENSE`` for more inf
 4. Push to the branch (`git push origin feature/Merlynn_Coding_Assessment`)
 5. Create a new Pull Request
 
+## Additions
+
+1. Added functionality to store data gathered from the TOM API to Firebase
+2. Security considerations on some Part
+3. Used Tailwindcss for Ui styling
